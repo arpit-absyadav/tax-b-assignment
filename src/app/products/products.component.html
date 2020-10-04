@@ -1,0 +1,35 @@
+  <main>
+    <div class="container popular-restro">
+      <div class="heading-for-popular">
+        <h2>Popular Restaurent</h2>
+        <p>42 results</p>
+      </div>
+
+      <div class="popular-results">
+        <div class="popular-results-box" *ngFor="let recipe of recipes">
+          <div class="popular-img">
+            <img src="{{recipe.image}}" alt="">
+          </div>
+
+          <div class="food-desription">
+            <div class="food-name-img"><img src="{{recipe.icon}}" alt=""></div>
+            <div class="food-name-div">
+              <div class="restro-name">
+                <h3>{{recipe.name}}</h3>
+              </div>
+              <ngb-rating [(rate)]="recipe.rating" max="5"></ngb-rating>
+
+            </div>
+            <div class="price-div">
+              <span class="price"> ${{recipe.price}}</span> <br> <span>*Min Order</span>
+            </div>
+          </div>
+          <div class="food-keyword">
+            <div class="tag" *ngFor="let tag of recipe.tags">{{tag}}</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>

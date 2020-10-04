@@ -1,0 +1,18 @@
+<div class="main container tab-menu">
+  <div *ngFor="let category of categories">
+    <div class="menu-outer">
+      <div class="menu-img">
+        <img src="{{category.image}}" alt="">
+      </div>
+      <div class="right-menu">
+        <h6>{{category.name}}</h6>
+        <p>{{category.restaurents}} restaurents</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class=" main container search-box">
+  <i class="fas fa-search search-icon"></i>
+  <input type="text" placeholder="Search Restaurent">
+</div>
